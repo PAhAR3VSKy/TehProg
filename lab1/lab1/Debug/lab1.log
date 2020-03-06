@@ -1,3 +1,20 @@
 ﻿  main.cpp
-C:\Users\paharevsky\source\repos\lab1\lab1\main.cpp(25,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-  lab1.vcxproj -> C:\Users\paharevsky\source\repos\lab1\Debug\lab1.exe
+D:\ProjectGit\TehProg\lab1\lab1\main.cpp(70,14): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+D:\ProjectGit\TehProg\lab1\lab1\main.cpp(86,13): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+D:\ProjectGit\TehProg\lab1\lab1\main.cpp(56,1): warning C4302: приведение типов: усечение из "VTYPE **" к "char"
+          with
+          [
+              VTYPE=int
+          ]
+D:\ProjectGit\TehProg\lab1\lab1\main.cpp(99): message : выполняется компиляция ссылки на экземпляр шаблон функции "int vput<int>(VIRTUAL *,long,VTYPE *)"
+          with
+          [
+              VTYPE=int
+          ]
+D:\ProjectGit\TehProg\lab1\lab1\main.cpp(70,13): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+D:\ProjectGit\TehProg\lab1\lab1\main.cpp(73,1): warning C4302: приведение типов: усечение из "VTYPE **" к "char"
+          with
+          [
+              VTYPE=int
+          ]
+  lab1.vcxproj -> D:\ProjectGit\TehProg\lab1\Debug\lab1.exe

@@ -11,75 +11,93 @@
 
 using namespace std;
 
+
 struct VIRTUAL {
-	FILE* Fp; /*файловый указатель виртуального массива*/
-	int Type; /*размер элемента в байтах*/
-	int Status[NPAGES]; /*статус страницы (флаг модификации)*/
-	int Number[NPAGES]; /*номер страницы*/
-	char Page[PAGESIZE]; /*буфер страниц*/
+    FILE* Fp; /*файловый указатель виртуального массива*/
+    int Type; /*размер элемента в байтах*/
+    int Status; /*статус страницы (флаг модификации)*/
+    int Number; /*номер страницы*/
+    char Page[PAGESIZE]; /*буфер страниц*/
 };
 
 VIRTUAL* vini(long size, int Type)
 {
-	VIRTUAL* vp = new VIRTUAL[size];
-	vp->Fp = fopen("test.asd", "w+");
-	fclose(vp->Fp);
-	return vp;
-}
-void* addres(VIRTUAL* array, long index)
-{
-	vector<int> page;
-	srand(time(0));
-	page.resize(2);
-	void* indexElement;
-	long hh = 512;
-	array->Fp = fopen("test.asd", "w+");
-	int page1 = (index - 1) / (PAGESIZE / (sizeof(int) * 8)) + 1;
-	for (int i = 0; i < _msize(array) / sizeof(VIRTUAL); i++)
-		for (int j = 0; j < PAGESIZE; j++)
-		{
-			array[i].Page[j] == index ? page.at(0) = i, page.at(1) = j : 0;
-		}
-	indexElement = &array[page.at(0)].Page[page.at(1)];
-
-
-
-	return NULL;
+    VIRTUAL* vp = new VIRTUAL[size];
+    for (int i = 0; i < NPAGES; i++) {
+        vp[i].Number = 0;
+        vp[i].Status = 0;
+    }
+    //vp->Fp = fopen("test.asd", "w+");
+    //fclose(vp->Fp);
+    return vp;
 }
 template<typename VTYPE>
-int vput(VIRTUAL* array, long index, VTYPE* value)
+void setInPage(char* buffer, VTYPE value, long index)
 {
-	addres(array, index);
-	return 0;
+    char* temp = (char*)&value;
+    int length = sizeof(VTYPE);
+
+    for (int i = 0; i < length; i++)
+        buffer[(index - 1) * length + i] = temp[i];
+
+}
+template<typename VTYPE>
+int vput(VIRTUAL* array, long index, VTYPE value)
+{
+    int absolutePage = (index - 1) / (sizeof(array->Page) / sizeof(value)) + 1;
+    for (int i = 0; i < NPAGES; i++)
+    {
+        if (absolutePage == array[i].Number)
+        {
+            int relativePage = (index - 1) % (sizeof(array->Page) / sizeof(value)) + 1;
+            array[i].Page[relativePage] = (char)&value;
+            return 0;
+        }
+    }
+    for (int i = 0; i < NPAGES; i++)
+    {
+        if (array[i].Status == 0)
+        {
+            array[i].Status == 1;
+            array[i].Number = absolutePage;
+            setInPage(array[i].Page, value, index);
+            cout << value << endl;
+            for (int j = 0; j < 512; j++)
+                cout << array[i].Page[j];
+
+            return 0;
+        }
+    }
+    srand(time(NULL));
+    int r = rand() % 2;
+    array[r].Number = absolutePage;
+    array[r].Page[index] = (char)&value;
+    return 0;
 }
 template<typename VTYPE>
 int vget(VIRTUAL* array, long index, VTYPE* value)
 {
-	addres(array, index);
-	return 0;
+
+    return 0;
 }
 void CreateFile(int count)
 {
-	int random;
-	ofstream file("file.bin", ios::binary | ios::out);
-	srand(time(NULL));
-	for (int i = 0; i < count; i++) {
-		random = rand() % 322;
-		file.write((char*)&random, sizeof(int));
-	}
-	file.close();
+    int random;
+    ofstream file("file.bin", ios::binary | ios::out);
+    srand(time(NULL));
+    for (int i = 0; i < count; i++) {
+        random = rand() % 322;
+        file.write((char*)&random, sizeof(int));
+    }
+    file.close();
 }
 int main()
 {
-	//addres(vini(NPAGES, PAGESIZE),100);
-	fstream inOut;
-	char s[100];
-	CreateFile(100);
-	inOut.open("file.bin", ios::binary | ios::in);
-	for (int i = 0; i < 100; i++) {
-		inOut >> s[i];
-		cout << s[i];
-	}
-	inOut.close();
-	return 0;
+    //addres(vini(NPAGES, PAGESIZE),100);
+    ifstream file;
+    int s = 4;
+    CreateFile(100);
+    vput(vini(2, 3), 2, s);
+    file.close();
+    return 0;
 }
