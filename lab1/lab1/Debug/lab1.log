@@ -1,20 +1,103 @@
-﻿  main.cpp
-D:\ProjectGit\TehProg\lab1\lab1\main.cpp(70,14): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-D:\ProjectGit\TehProg\lab1\lab1\main.cpp(86,13): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-D:\ProjectGit\TehProg\lab1\lab1\main.cpp(56,1): warning C4302: приведение типов: усечение из "VTYPE **" к "char"
+﻿  Source.cpp
+D:\ProjectGit\TehProg\lab1\lab1\virtualmemory.h(64,13): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+D:\ProjectGit\TehProg\lab1\lab1\virtualmemory.h(92,13): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+D:\ProjectGit\TehProg\lab1\lab1\Source.cpp(12,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+D:\ProjectGit\TehProg\lab1\lab1\Source.cpp(24,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+D:\ProjectGit\TehProg\lab1\lab1\virtualmemory.h(64,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+D:\ProjectGit\TehProg\lab1\lab1\virtualmemory.h(44): message : во время компиляции функции-члена класс шаблон "void virtualmemory<int>::vput(long,T)"
           with
           [
-              VTYPE=int
+              T=int
           ]
-D:\ProjectGit\TehProg\lab1\lab1\main.cpp(99): message : выполняется компиляция ссылки на экземпляр шаблон функции "int vput<int>(VIRTUAL *,long,VTYPE *)"
+D:\ProjectGit\TehProg\lab1\lab1\Source.cpp(87): message : выполняется компиляция ссылки на экземпляр шаблон функции "void virtualmemory<int>::vput(long,T)"
           with
           [
-              VTYPE=int
+              T=int
           ]
-D:\ProjectGit\TehProg\lab1\lab1\main.cpp(70,13): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-D:\ProjectGit\TehProg\lab1\lab1\main.cpp(73,1): warning C4302: приведение типов: усечение из "VTYPE **" к "char"
+D:\ProjectGit\TehProg\lab1\lab1\Source.cpp(66): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "virtualmemory<int>"
+D:\ProjectGit\TehProg\lab1\lab1\virtualmemory.h(92,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+D:\ProjectGit\TehProg\lab1\lab1\virtualmemory.h(73): message : во время компиляции функции-члена класс шаблон "T virtualmemory<T>::vget(long)"
           with
           [
-              VTYPE=int
+              T=int
           ]
+D:\ProjectGit\TehProg\lab1\lab1\Source.cpp(71): message : выполняется компиляция ссылки на экземпляр шаблон функции "T virtualmemory<T>::vget(long)"
+          with
+          [
+              T=int
+          ]
+D:\ProjectGit\TehProg\lab1\lab1\pages.h(55,25): warning C4018: >: несоответствие типов со знаком и без знака
+D:\ProjectGit\TehProg\lab1\lab1\pages.h(54): message : во время компиляции функции-члена класс шаблон "void pages<T>::setBuff(long,T)"
+          with
+          [
+              T=int
+          ]
+D:\ProjectGit\TehProg\lab1\lab1\virtualmemory.h(52): message : выполняется компиляция ссылки на экземпляр шаблон функции "void pages<T>::setBuff(long,T)"
+          with
+          [
+              T=int
+          ]
+D:\ProjectGit\TehProg\lab1\lab1\virtualmemory.h(22): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "pages<T>"
+          with
+          [
+              T=int
+          ]
+D:\ProjectGit\TehProg\lab1\lab1\virtualmemory.h(21): message : во время компиляции функции-члена класс шаблон "virtualmemory<int>::virtualmemory(int,int,const char *)"
+D:\ProjectGit\TehProg\lab1\lab1\Source.cpp(66): message : выполняется компиляция ссылки на экземпляр шаблон функции "virtualmemory<int>::virtualmemory(int,int,const char *)"
+D:\ProjectGit\TehProg\lab1\lab1\pages.h(65,6): warning C4101: k: неиспользованная локальная переменная
+D:\ProjectGit\TehProg\lab1\lab1\pages.h(71,25): warning C4018: >: несоответствие типов со знаком и без знака
+D:\ProjectGit\TehProg\lab1\lab1\pages.h(70): message : во время компиляции функции-члена класс шаблон "T pages<T>::getBuff(long)"
+          with
+          [
+              T=int
+          ]
+D:\ProjectGit\TehProg\lab1\lab1\virtualmemory.h(82): message : выполняется компиляция ссылки на экземпляр шаблон функции "T pages<T>::getBuff(long)"
+          with
+          [
+              T=int
+          ]
+D:\ProjectGit\TehProg\lab1\lab1\pages.h(104,25): warning C4018: >: несоответствие типов со знаком и без знака
+D:\ProjectGit\TehProg\lab1\lab1\pages.h(103): message : во время компиляции функции-члена класс шаблон "T pages<T>::getDump(long)"
+          with
+          [
+              T=int
+          ]
+D:\ProjectGit\TehProg\lab1\lab1\virtualmemory.h(89): message : выполняется компиляция ссылки на экземпляр шаблон функции "T pages<T>::getDump(long)"
+          with
+          [
+              T=int
+          ]
+D:\ProjectGit\TehProg\lab1\lab1\pages.h(90,25): warning C4018: >: несоответствие типов со знаком и без знака
+D:\ProjectGit\TehProg\lab1\lab1\pages.h(89): message : во время компиляции функции-члена класс шаблон "void pages<T>::setDump(long,T)"
+          with
+          [
+              T=int
+          ]
+D:\ProjectGit\TehProg\lab1\lab1\virtualmemory.h(60): message : выполняется компиляция ссылки на экземпляр шаблон функции "void pages<T>::setDump(long,T)"
+          with
+          [
+              T=int
+          ]
+D:\ProjectGit\TehProg\lab1\lab1\pages.h(158,26): warning C4244: =: преобразование "std::streamoff" в "int", возможна потеря данных
+D:\ProjectGit\TehProg\lab1\lab1\pages.h(155): message : во время компиляции функции-члена класс шаблон "void pages<T>::fileSize(void)"
+          with
+          [
+              T=int
+          ]
+D:\ProjectGit\TehProg\lab1\lab1\pages.h(44): message : выполняется компиляция ссылки на экземпляр шаблон функции "void pages<T>::fileSize(void)"
+          with
+          [
+              T=int
+          ]
+D:\ProjectGit\TehProg\lab1\lab1\pages.h(30): message : во время компиляции функции-члена класс шаблон "pages<T>::pages(void)"
+          with
+          [
+              T=int
+          ]
+D:\ProjectGit\TehProg\lab1\lab1\virtualmemory.h(22): message : выполняется компиляция ссылки на экземпляр шаблон функции "pages<T>::pages(void)"
+          with
+          [
+              T=int
+          ]
+  LINK : не найден или не выполнена сборка D:\ProjectGit\TehProg\lab1\Debug\lab1.exe при последней инкрементной компоновке; выполняется полная компоновка
   lab1.vcxproj -> D:\ProjectGit\TehProg\lab1\Debug\lab1.exe
