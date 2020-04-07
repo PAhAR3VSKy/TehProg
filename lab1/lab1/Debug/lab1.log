@@ -9,7 +9,7 @@ D:\ProjectGit\TehProg\lab1\lab1\virtualmemory.h(44): message : во время �
           [
               T=int
           ]
-D:\ProjectGit\TehProg\lab1\lab1\Source.cpp(87): message : выполняется компиляция ссылки на экземпляр шаблон функции "void virtualmemory<int>::vput(long,T)"
+D:\ProjectGit\TehProg\lab1\lab1\Source.cpp(93): message : выполняется компиляция ссылки на экземпляр шаблон функции "void virtualmemory<int>::vput(long,T)"
           with
           [
               T=int
@@ -99,5 +99,4 @@ D:\ProjectGit\TehProg\lab1\lab1\virtualmemory.h(22): message : выполняе�
           [
               T=int
           ]
-  LINK : не найден или не выполнена сборка D:\ProjectGit\TehProg\lab1\Debug\lab1.exe при последней инкрементной компоновке; выполняется полная компоновка
   lab1.vcxproj -> D:\ProjectGit\TehProg\lab1\Debug\lab1.exe

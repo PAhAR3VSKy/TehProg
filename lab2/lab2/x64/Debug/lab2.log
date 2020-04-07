@@ -1,0 +1,21 @@
+﻿  source.cpp
+D:\ProjectGit\ProgrammingTechnology\lab2\lab2\ListStructure.h(114,13): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+D:\ProjectGit\ProgrammingTechnology\lab2\lab2\ListStructure.h(158,13): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+D:\ProjectGit\ProgrammingTechnology\lab2\lab2\ListStructure.h(114,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+D:\ProjectGit\ProgrammingTechnology\lab2\lab2\ListStructure.h(104): message : во время компиляции функции-члена класс шаблон "void ListStructure<int>::init(int,const char *)"
+D:\ProjectGit\ProgrammingTechnology\lab2\lab2\source.cpp(19): message : выполняется компиляция ссылки на экземпляр шаблон функции "void ListStructure<int>::init(int,const char *)"
+D:\ProjectGit\ProgrammingTechnology\lab2\lab2\source.cpp(17): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "ListStructure<int>"
+D:\ProjectGit\ProgrammingTechnology\lab2\lab2\ListStructure.h(158,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+D:\ProjectGit\ProgrammingTechnology\lab2\lab2\ListStructure.h(157): message : во время компиляции функции-члена класс шаблон "T ListStructure<T>::insert(T)"
+          with
+          [
+              T=int
+          ]
+D:\ProjectGit\ProgrammingTechnology\lab2\lab2\source.cpp(20): message : выполняется компиляция ссылки на экземпляр шаблон функции "T ListStructure<T>::insert(T)"
+          with
+          [
+              T=int
+          ]
+D:\ProjectGit\ProgrammingTechnology\lab2\lab2\List.h(135): warning C4715: List<int>::operator[]: значение возвращается не при всех путях выполнения
+D:\ProjectGit\ProgrammingTechnology\lab2\lab2\List.h(152): warning C4715: List<int>::getPoint: значение возвращается не при всех путях выполнения
+  lab2.vcxproj -> D:\ProjectGit\ProgrammingTechnology\lab2\x64\Debug\lab2.exe

@@ -81,6 +81,12 @@ void workWithInt()
 			int index, value;
 			cout << "index : ";
 			index = checkValue();
+			while (index > count)
+			{
+				cout << "Index out of range" << endl
+					<< "index : ";
+				index = checkValue();
+			}
 			cout << "value : ";
 			value = checkValue();
 			cout << endl;
@@ -89,6 +95,12 @@ void workWithInt()
 		case 2:
 			cout << "index : ";
 			index = checkValue();
+			while (index > count)
+			{
+				cout << "Index out of range" << endl
+					<< "index : ";
+				index = checkValue();
+			}
 			cout << index << " index: " << pages.vget(index) << endl;
 			break;
 		}
