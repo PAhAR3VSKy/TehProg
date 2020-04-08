@@ -1,46 +1,60 @@
-#include "ListStructure.h"
-template <class T>
-void read(int pos,int type)
+﻿#include "ListStructure.h"
+int checkValue()
 {
-	T* test=new T;
-	fstream file("file.bin", ios::binary | ios::in | ios::out);
-	if (!file.is_open())
-		return;
-	file.seekg(pos, ios_base::beg);
-	file.read((char*)test,type);
-	cout <<*test<<endl;
-	file.close();
-	delete[] test;
-}
-int main() 
-{
-	ListStructure<int> *list = new ListStructure<int>();
-
-	list->init(5,"file.bin");
-	list->insert(22);
-	read<int>(0,sizeof(int));
-	read<short int>(4, sizeof(short int));
-	read<void*>(6, sizeof(void*));
-	read<void*>(14, sizeof(void*));
-	for(int i=0;i<list->getSize();i++)
-	list->fromFile(i);
-	int x;
-	int count;
-	cin >> count;
-	for (int i = 0; i < count; i++)
+	int value;
+	while (true)
 	{
-	cin >> x;
-		list->del(x);
+		cin >> value;
+		if (!cin)
+		{
+			cout << "К сожалению, этот ввод неверен. Пожалуйста, попробуйте еще раз." << endl
+				<< "value :";
+			cin.clear();
+			while (cin.get() != '\n');
+		}
+		else
+			return value;
 	}
-	
-	list->pack();
+}
 
-	read<int>(0, sizeof(int));
-	read<short int>(4, sizeof(short int));
-	read<void*>(6, sizeof(void*));
-	read<void*>(14, sizeof(void*));
-	for (int i = 0; i < list->getSize(); i++)
-		list->fromFile(i);
 
+int main()
+{
+	setlocale(LC_ALL, "ru");
+	int size;
+	int operation = -1;
+	int value;
+	ListStructure<int>* list = new ListStructure<int>();
+	cout << "Введите размер списка:";
+	size = checkValue();
+	list->init(size, "file.bin");
+	list->fromFile();
+	while (operation != 0) {
+		cout << "Выберите операцию:" << endl
+			<< "· 1-вставить значение	·" << endl
+			<< "· 2-удалить значение	·" << endl
+			<< "· 3-сортировать список	·" << endl;
+		operation = checkValue();
+		switch (operation)
+		{
+		case 1:
+			cout << "Введите значение для вставки в список: ";
+			value = checkValue();
+			list->insert(value);
+			list->fromFile();
+			break;
+		case 2:
+			cout << "Введите значение для удаления из списка: ";
+			value = checkValue();
+			list->del(value);
+			list->fromFile();
+			break;
+		case 3:
+			list->pack();
+			list->fromFile();
+			cout << "Список был сортирован" << endl;
+			break;
+		}
+	}
 	return 0;
 }
