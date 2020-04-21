@@ -3,19 +3,21 @@ D:\ProjectGit\TehProg\lab2\lab2\ListStructure.h(108,13): warning C4244: аргу
 D:\ProjectGit\TehProg\lab2\lab2\ListStructure.h(193,13): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
 D:\ProjectGit\TehProg\lab2\lab2\ListStructure.h(108,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
 D:\ProjectGit\TehProg\lab2\lab2\ListStructure.h(98): message : во время компиляции функции-члена класс шаблон "void ListStructure<int>::init(int,const char *)"
-D:\ProjectGit\TehProg\lab2\lab2\source.cpp(30): message : выполняется компиляция ссылки на экземпляр шаблон функции "void ListStructure<int>::init(int,const char *)"
-D:\ProjectGit\TehProg\lab2\lab2\source.cpp(27): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "ListStructure<int>"
+D:\ProjectGit\TehProg\lab2\lab2\source.cpp(28): message : выполняется компиляция ссылки на экземпляр шаблон функции "void ListStructure<int>::init(int,const char *)"
+D:\ProjectGit\TehProg\lab2\lab2\source.cpp(22): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "ListStructure<int>"
 D:\ProjectGit\TehProg\lab2\lab2\ListStructure.h(193,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
 D:\ProjectGit\TehProg\lab2\lab2\ListStructure.h(192): message : во время компиляции функции-члена класс шаблон "T ListStructure<T>::insert(T)"
           with
           [
               T=int
           ]
-D:\ProjectGit\TehProg\lab2\lab2\source.cpp(43): message : выполняется компиляция ссылки на экземпляр шаблон функции "T ListStructure<T>::insert(T)"
+D:\ProjectGit\TehProg\lab2\lab2\source.cpp(41): message : выполняется компиляция ссылки на экземпляр шаблон функции "T ListStructure<T>::insert(T)"
           with
           [
               T=int
           ]
-D:\ProjectGit\TehProg\lab2\lab2\List.h(135): warning C4715: List<int>::operator[]: значение возвращается не при всех путях выполнения
 D:\ProjectGit\TehProg\lab2\lab2\List.h(152): warning C4715: List<int>::getPoint: значение возвращается не при всех путях выполнения
+D:\ProjectGit\TehProg\lab2\lab2\List.h(135): warning C4715: List<int>::operator[]: значение возвращается не при всех путях выполнения
+D:\ProjectGit\TehProg\lab2\lab2\List.h(135): warning C4715: List<char>::operator[]: значение возвращается не при всех путях выполнения
+D:\ProjectGit\TehProg\lab2\lab2\List.h(152): warning C4715: List<char>::getPoint: значение возвращается не при всех путях выполнения
   lab2.vcxproj -> D:\ProjectGit\TehProg\lab2\x64\Debug\lab2.exe
