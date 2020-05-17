@@ -17,7 +17,7 @@ D:\ProjectGit\TehProg\lab2\lab2\source.cpp(41): message : выполняется
               T=int
           ]
 D:\ProjectGit\TehProg\lab2\lab2\List.h(152): warning C4715: List<int>::getPoint: значение возвращается не при всех путях выполнения
-D:\ProjectGit\TehProg\lab2\lab2\List.h(135): warning C4715: List<int>::operator[]: значение возвращается не при всех путях выполнения
 D:\ProjectGit\TehProg\lab2\lab2\List.h(135): warning C4715: List<char>::operator[]: значение возвращается не при всех путях выполнения
 D:\ProjectGit\TehProg\lab2\lab2\List.h(152): warning C4715: List<char>::getPoint: значение возвращается не при всех путях выполнения
+D:\ProjectGit\TehProg\lab2\lab2\List.h(135): warning C4715: List<int>::operator[]: значение возвращается не при всех путях выполнения
   lab2.vcxproj -> D:\ProjectGit\TehProg\lab2\x64\Debug\lab2.exe

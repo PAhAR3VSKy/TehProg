@@ -1,0 +1,21 @@
+﻿  main.cpp
+C:\Users\paharevsky\source\repos\lab3TP\lab3TP\Structure.h(239,13): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\paharevsky\source\repos\lab3TP\lab3TP\Structure.h(382,13): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\paharevsky\source\repos\lab3TP\lab3TP\Structure.h(239,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\paharevsky\source\repos\lab3TP\lab3TP\Structure.h(238): message : во время компиляции функции-члена класс шаблон "void Structure<int>::init(int,const char *,const char *)"
+C:\Users\paharevsky\source\repos\lab3TP\lab3TP\main.cpp(29): message : выполняется компиляция ссылки на экземпляр шаблон функции "void Structure<int>::init(int,const char *,const char *)"
+C:\Users\paharevsky\source\repos\lab3TP\lab3TP\main.cpp(26): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "Structure<int>"
+C:\Users\paharevsky\source\repos\lab3TP\lab3TP\Structure.h(382,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\paharevsky\source\repos\lab3TP\lab3TP\Structure.h(381): message : во время компиляции функции-члена класс шаблон "T Structure<T>::insert(T)"
+          with
+          [
+              T=int
+          ]
+C:\Users\paharevsky\source\repos\lab3TP\lab3TP\main.cpp(44): message : выполняется компиляция ссылки на экземпляр шаблон функции "T Structure<T>::insert(T)"
+          with
+          [
+              T=int
+          ]
+C:\Users\paharevsky\source\repos\lab3TP\lab3TP\List.h(142): warning C4715: List<int>::getPoint: значение возвращается не при всех путях выполнения
+C:\Users\paharevsky\source\repos\lab3TP\lab3TP\List.h(125): warning C4715: List<int>::operator[]: значение возвращается не при всех путях выполнения
+  lab3TP.vcxproj -> C:\Users\paharevsky\source\repos\lab3TP\Debug\lab3TP.exe

@@ -100,6 +100,7 @@ int main()
 {
 	setlocale(LC_ALL, "ru");
 	int choice;
+	cout << "Работа с односвязным списком" << endl;
 	cout << "Выбирите тип данных:" << endl
 		 << "1. Int" << endl
 		 << "2. Char" << endl;
