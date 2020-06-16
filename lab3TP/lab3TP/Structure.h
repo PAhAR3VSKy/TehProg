@@ -16,7 +16,9 @@ public:
 	void fromFileProduct();
 	void fromFileSpecific();
 	void link(int, int);
+	void resizeSpecific(int);
 	T insert(T);
+	T insertSpecific(T);
 	void del(T);
 	void pack();
 
@@ -265,7 +267,10 @@ inline void Structure<T>::link(int prodNumber, int specNumber)
 
 	for (int i = 0; i < size; i++)
 		if (tempSpec.getPointProd(i) == tempProd.getPoint())
+		{
+			cout << "<<<<|Это значение уже является ссылкой!|>>>>" << endl;
 			return;
+		}
 
 	tempSpec.setPointProd(tempProd.getPoint());
 	tempSpec.setRate();
@@ -449,23 +454,6 @@ T Structure<T>::insert(T value)
 	size++;
 
 
-	for (int i = 0; i < sizeSpecific; i++)
-	{
-		fstream fileS(fileSpec, ios::binary | ios::out | ios::in);
-
-		listInfSpecific temp;
-		fileS.seekg(14 + sizeof(listInfSpecific) * i, ios::beg);
-		fileS.read((char*)&temp, sizeof(listInfSpecific));
-		fileS.close();
-		temp.ResizeArray();
-
-		fileS.open(fileSpec, ios::binary | ios::out | ios::in);
-		fileS.seekg(14 + sizeof(listInfSpecific) * i, ios::beg);
-		fileS.write((char*)&temp, sizeof(listInfSpecific));
-		fileS.close();
-	}
-
-
 	temp.setInf(false, listProduct->getPoint(size - 2), listProduct->operator[](size - 1));
 
 	file.open(fileProd, ios::binary | ios::out | ios::in);
@@ -481,6 +469,39 @@ T Structure<T>::insert(T value)
 
 	return value;
 }
+
+template<class T>
+T Structure<T>::insertSpecific(T data)
+{
+	fstream fileS(fileSpec, ios::binary | ios::in | ios::out);
+	listInfSpecific spec;
+	listSpecifications->push_back(data);
+	spec.setInf(listSpecifications->getPoint(listSpecifications->GetSize() - 2), listSpecifications->operator[](listSpecifications->GetSize() - 1), 1);
+	fileS.seekg(14 + sizeof(listInfSpecific) * (sizeSpecific));
+	fileS.write((char*)&spec, sizeof(listInfSpecific));
+	fileS.close();
+	sizeSpecific++;
+	return data;
+}
+
+template<class T>
+void Structure<T>::resizeSpecific(int specNumber)
+{
+	fstream fileS(fileSpec, ios::binary | ios::out | ios::in);
+	listInfSpecific tempSpec;
+	int posSpec = 14 + sizeof(listInfSpecific) * (specNumber - 1);
+
+	fileS.seekg(posSpec, ios_base::beg);
+	fileS.read((char*)&tempSpec, sizeof(listInfSpecific));
+	fileS.close();
+
+	tempSpec.ResizeArray();
+
+	fileS.open(fileSpec, ios::binary | ios::out | ios::in);
+	fileS.seekg(posSpec, ios_base::beg);
+	fileS.write((char*)&tempSpec, sizeof(listInfSpecific));
+	fileS.close();
+};
 
 template<class T>
 inline void* Structure<T>::find(T data)
