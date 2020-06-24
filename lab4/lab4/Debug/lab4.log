@@ -1,0 +1,20 @@
+﻿  Source.cpp
+D:\ProjectGit\ProgrammingTechnology\lab4\lab4\lab4\BTree.h(40,13): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+D:\ProjectGit\ProgrammingTechnology\lab4\lab4\lab4\BTree.h(40,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+D:\ProjectGit\ProgrammingTechnology\lab4\lab4\lab4\BTree.h(39): message : во время компиляции функции-члена класс шаблон "void BTree<T>::Init(int,int,const char *)"
+          with
+          [
+              T=int
+          ]
+D:\ProjectGit\ProgrammingTechnology\lab4\lab4\lab4\Source.cpp(37): message : выполняется компиляция ссылки на экземпляр шаблон функции "void BTree<T>::Init(int,int,const char *)"
+          with
+          [
+              T=int
+          ]
+D:\ProjectGit\ProgrammingTechnology\lab4\lab4\lab4\Source.cpp(30): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "BTree<T>"
+          with
+          [
+              T=int
+          ]
+D:\ProjectGit\ProgrammingTechnology\lab4\lab4\lab4\Source.cpp(77): message : выполняется компиляция ссылки на экземпляр шаблон функции "void interface<int>(void)"
+  lab4.vcxproj -> D:\ProjectGit\ProgrammingTechnology\lab4\lab4\Debug\lab4.exe

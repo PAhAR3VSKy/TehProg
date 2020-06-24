@@ -40,8 +40,7 @@ void interface()
 			<< "|· 2-удалить значение                           |" << endl
 			<< "|· 3-сортировать список Product                 |" << endl
 			<< "|· 4-Связать список Product со списком Specific	|" << endl
-			<< "|· 5-Вставить спецификацию в список Specific	|" << endl
-			<< "|· 6-Увеличить размер Specific			|" << endl;
+			<< "|· 5-Вставить спецификацию в список Specific	|" << endl;
 		operation = checkValue<int>();
 		switch (operation)
 		{

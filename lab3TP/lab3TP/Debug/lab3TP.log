@@ -17,14 +17,14 @@ D:\ProjectGit\TehProg\lab3TP\lab3TP\main.cpp(31): message : выполняетс
           [
               T=int
           ]
-D:\ProjectGit\TehProg\lab3TP\lab3TP\main.cpp(97): message : выполняется компиляция ссылки на экземпляр шаблон функции "void interface<int>(void)"
+D:\ProjectGit\TehProg\lab3TP\lab3TP\main.cpp(96): message : выполняется компиляция ссылки на экземпляр шаблон функции "void interface<int>(void)"
 D:\ProjectGit\TehProg\lab3TP\lab3TP\Structure.h(383,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
 D:\ProjectGit\TehProg\lab3TP\lab3TP\Structure.h(382): message : во время компиляции функции-члена класс шаблон "T Structure<T>::insert(T)"
           with
           [
               T=int
           ]
-D:\ProjectGit\TehProg\lab3TP\lab3TP\main.cpp(51): message : выполняется компиляция ссылки на экземпляр шаблон функции "T Structure<T>::insert(T)"
+D:\ProjectGit\TehProg\lab3TP\lab3TP\main.cpp(50): message : выполняется компиляция ссылки на экземпляр шаблон функции "T Structure<T>::insert(T)"
           with
           [
               T=int
